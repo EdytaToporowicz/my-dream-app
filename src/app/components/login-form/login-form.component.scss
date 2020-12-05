@@ -1,0 +1,16 @@
+.form {
+    max-width: 520px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    box-shadow: 0 4px 9px gray;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.warning {
+    border: 1px solid red;
+}
+
+.warning-text{
+    color: red !important;
+}

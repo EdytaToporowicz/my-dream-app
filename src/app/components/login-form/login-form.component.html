@@ -1,0 +1,63 @@
+<section>
+    <p>login-form works!</p>
+    <!-- aby mieć dostęp do 
+    propertki formGroup musimy
+    zaimportować ReactiveFormsModule
+    w pliku app.module.ts -->
+    <form class="form" [formGroup]="loginForm">
+
+        <h2>Login form</h2>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input 
+            [ngClass]="{'warning': !this.loginForm.get('email').valid && this.loginForm.get('email').touched}"
+            formControlName="email"
+            type="email" 
+            class="form-control" 
+            id="exampleInputEmail1" 
+            aria-describedby="emailHelp">
+          <small 
+            [ngClass]="{'warning-text': !this.loginForm.get('email').valid && this.loginForm.get('email').touched}"
+            *ngIf="!this.loginForm.get('email').valid && this.loginForm.get('email').touched"
+            id="emailHelp" 
+            class="form-text text-muted">
+            Please write your email adress!
+        </small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input 
+          [ngClass]="{'warning': !this.loginForm.get('password').valid && this.loginForm.get('password').touched}"
+            formControlName="password"
+            type="password"
+            class="form-control" 
+            id="exampleInputPassword1"
+            aria-describedby="emailHelp">
+        <small 
+            [ngClass]="{'warning-text': !this.loginForm.get('password').valid && this.loginForm.get('password').touched}"
+            *ngIf="!this.loginForm.get('password').valid && this.loginForm.get('password').touched"
+            id="emailHelp" 
+            class="form-text text-muted">
+            Please write your password!
+        </small>
+        </div>
+        <div class="form-group form-check">
+          <input 
+            formControlName="terms"
+            type="checkbox" 
+            class="form-check-input" 
+            id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Terms & Conditions</label>
+        </div>
+        <button 
+            (click)="onFormSubmit()"
+           
+            type="submit" 
+            class="btn btn-primary">Login</button>
+            <!-- wykomentowaliśmy żeby zrobić zaszarzenie -->
+             <!-- [disabled]="!loginForm.valid" -->
+
+    </form>
+</section>

@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoItemComponent } from './components/todo/todo-item/todo-item.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { TodoItemComponent } from './components/todo/todo-item/todo-item.compone
     SecondComponent,
     ThirdComponent,
     TodoComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    LoginFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
