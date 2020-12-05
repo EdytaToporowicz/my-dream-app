@@ -1,0 +1,34 @@
+<!-- {{todoData}}
+{{indexData}} -->
+
+
+<!-- <p>{{todoItemData.id}}</p>  === nie można pokazywać- kasujemy -->
+
+
+<!-- <div class="todo-item">
+    <p class="description">{{todoItemData.description}}</p> -->
+<!-- linię wyżej zastępujemy tym:  -->
+
+<!-- <input type="text" [(ngModel)]="todoItemData.description" /> -->
+
+<!-- M miesiąc / m minuta -->
+<!-- <p>{{todoItemData.date | date:'dd/MM/yyyy'}}</p>
+    <p>{{todoItemData.isDone}}</p>
+    <button (click)="onTodoItemDelete(indexData)">Delete</button>
+</div> -->
+
+
+<!-- z bootstrap: -->
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input">
+        </div>
+    </div>
+    <input type="text" [(ngModel)]="todoItemData.description" class="form-control"
+        aria-label="Text input with checkbox">
+
+    <div class="input-group-append">
+        <button (click)="onTodoItemDelete(indexData)" class="btn btn-outline-secondary" type="button">Delete</button>
+    </div>
+</div>

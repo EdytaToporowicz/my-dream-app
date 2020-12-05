@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+// reset przegląd.aby pozbyć się domyslnych paddingów i margin
+
+* {
+    padding: 0;
+    margin: 0;
+}

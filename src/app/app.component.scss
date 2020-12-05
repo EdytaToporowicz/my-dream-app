@@ -1,0 +1,15 @@
+.nav {
+    background-color: white;
+    box-shadow: 0 5px 6px black;
+    padding: 30px;
+}
+
+.nav__list {
+    // domyśln.dział flex - ustaw listy w rzędzie
+    display: flex;
+    list-style: none;
+}
+
+.nav__item {
+    margin-right: 20px;
+}

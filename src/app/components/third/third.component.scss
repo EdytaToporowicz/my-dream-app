@@ -1,0 +1,23 @@
+img {
+    height: 300px;
+}
+
+//odwołanie po id
+#img_id {
+}
+
+//odwołanie po klasie
+.img_class {
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box--color {
+    background-color: darkgoldenrod;
+}

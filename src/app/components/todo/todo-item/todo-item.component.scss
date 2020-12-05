@@ -1,0 +1,16 @@
+.todo-item {
+    border: 1px solid grey;
+    margin: 30px;
+}
+.description {
+    font-size: 30px;
+    color: blue;
+    background-color: gainsboro;
+}
+
+//media query aby móc zarządzać responsywn.
+@media only screen and(max-width: 500px) {
+    .description {
+        background-color: white;
+    }
+}

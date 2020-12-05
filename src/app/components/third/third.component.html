@@ -1,0 +1,37 @@
+<p>third works!</p>
+<!-- interpolacja stringa -->
+{{myName}}
+{{myAge}}
+
+<!-- property binding = powiązanie atrybutu elementu html 
+    (gdy typ prosty {{myImage}}, a tak nawias kwadratowy do src) -->
+<img id="img_id" class="img_class" [src]=myImageUrl alt="my photo" />
+
+<!-- event binding -->
+<button (click)="onClick()">Click Me!</button>
+
+<!-- two-way binding -->
+<!-- aby móc używać - zaimportować FormsModule w app.module.ts -->
+<!-- działa w dwie strony: wpisuję w oknie i zmienia się aktywnie na str wwww -->
+<input type="text" [(ngModel)]="myName" />
+
+<!-- directives  IF -->
+<div>
+    <p *ngIf="isVisible">Hello! Widać mnie!</p>
+
+    <!-- dyrektywy atrybutu -->
+    <!-- metodologia nazewnictwa klas CSS BEM -->
+    <div class="box" [ngClass]="{'box--color': isVisible}">
+    </div>
+
+    <button (click)="onShowText()">
+        {{btnText}} text
+    </button>
+</div>
+
+<!-- directives FOR -->
+<ul>
+    <li *ngFor="let name of names; let i = index">{{name}}_{{i}} </li>
+</ul>
+
+<!--  -->
